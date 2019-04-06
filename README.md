@@ -4,8 +4,11 @@ library and is loosely based off of [ecovacs-aws](https://github.com/bamminger/e
 
 If you're into MQTT, you might want to use [openhab-sucks](https://github.com/guillebot/openhab-sucks) instead.
 
-I am not a Python programmer; this is really bad code. Please fix it. If you
-know how to get the status information without being able to subscribe to the
+I am not a Python programmer; this is really bad code. Please fix it. There is
+no authentication because the expectation is that you're running this on your
+internal network. You've been warned.
+
+If you know how to get the status information without being able to subscribe to the
 events, please fix this. It gets the job done for my needs by starting cleaning
 when someone leaves the house via API call from Hubitat, then sends it home
 when someone returns. 
