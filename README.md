@@ -12,32 +12,32 @@ when someone returns.
 
 # Installation
 1. Install sucks and flask python modules
-<code>
+<pre>
 # pip3 install sucks
 # pip3 install flask
-</code>
+</pre>
 2. Change your login/password in the ecovacs_flask.py
 3. Change directory in the .service file to match where your ecovacs_flask.py file is.
 4. Copy service file to /lib/systemd/system/ then enable it.
-<code>
+<pre>
 # systemctl enable ecovacs-api.service
 # systemctl start ecovacs-api.service
-</code>
+</pre>
 5. Use it. 
-<code>
+<pre>
 # curl -s http://yourip:5050/api/clean/0 
 # curl -s http://yourip:5050/api/charge/0 
 # curl -s http://yourip:5050/api/playsound/0 
-</code>
+</pre>
 
 # Troubleshooting
 1. If you have multiple vacuums, you may need to change the number to 1, or 2
 if you have 3 vacuums on your account. 
 2. You should make sure sucks works before configuring this script. 
-<code>
+<pre>
 # sucks login
 # sucks --debug stop
-</code> 
+</pre> 
 3. You can always enable debug in the ecovacs_flask.py script and run it from
 the commandline. 
 
