@@ -1,0 +1,15 @@
+[Unit]
+Description=Ecovacs API
+Requires=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+User=nobody
+Group=dialout
+#WorkingDirectory=/home/pi/ecovacs-api
+ExecStart=/usr/bin/python3 /home/pi/ecovacs-api/ecovacs_flask.py
+
+[Install]
+WantedBy=multi-user.target
+
