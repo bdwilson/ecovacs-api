@@ -6,7 +6,7 @@ If you're into MQTT, you might want to use [openhab-sucks](https://github.com/gu
 
 I am not a Python programmer; this is really bad code. Please fix it. There is
 no authentication because the expectation is that you're running this on your
-internal network. You've been warned.
+internal, trusted home network. You've been warned.
 
 If you know how to get the status information without being able to subscribe to the
 events, please fix this. It gets the job done for my needs by starting cleaning
