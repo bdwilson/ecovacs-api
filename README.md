@@ -1,5 +1,4 @@
-#Ecovacs Robotic Vacuum API
-
+# Ecovacs Robotic Vacuum API
 This flask API uses the [sucks](https://github.com/wpietri/sucks) python
 library and is loosely based off of [ecovacs-aws](https://github.com/bamminger/ecovacs-aws). 
 
