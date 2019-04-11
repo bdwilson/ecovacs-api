@@ -6,11 +6,13 @@
 # sudo pip3 install sucks 
 # sudo pip3 install flask
 #
-# Set your email, password, country and continent below.
+# Set your email, password, country, continent and port to run
+# this service on.
+#
 # If you have more than one device on your account, you'll need to 
-# determine which device you want to control. Replace 0 with 1 if 
-# want to control your 2nd device.
-# 
+# determine which device you want to control. 
+#
+# Replace 0 with 1 if  want to control your 2nd device.
 # Usage: /api/[clean|charge|edge|spot|stop|playsound]/0
 # 
 # If someone can figure out how to get the status of the device,
@@ -30,10 +32,11 @@ valid_commands = ["clean", "charge", "edge", "spot", "stop", "playsound"]
 
 config = {
     "device_id": EcoVacsAPI.md5(str(time.time())), # value taken from the sucks source
-    "email": "your@email.com", # fill in your email
-    "password_hash": EcoVacsAPI.md5("MySecureP4ssw0rd"), # fill in your password
-    "country": "us", # your ecovacs country e.g. at
-    "continent": "na" # your continent e.g. eu
+    "email": "ECOVACS_USER", # fill in your email
+    "password_hash": EcoVacsAPI.md5("ECOVACS_PASS"), # fill in your password
+    "country": "ECOVACS_COUNTRY", # your ecovacs country e.g. us
+    "continent": "ECOVACS_CONTINENT", # your continent e.g. na
+    "port": "ECOVACS_PORT" # port for your service to run on
 }
 
 def sendCommand(device,command):
@@ -71,6 +74,6 @@ def api(command,device=0):
 		return(val)
  
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5050, debug=False)
+    app.run(host='0.0.0.0', port=config['port'], debug=False)
 
 

@@ -13,13 +13,13 @@ events, please fix this. It gets the job done for my needs by starting cleaning
 when someone leaves the house via API call from Hubitat, then sends it home
 when someone returns. 
 
-# Installation
+# Installation (manual)
 1. Install sucks and flask python modules
 <pre>
 # pip3 install sucks
 # pip3 install flask
 </pre>
-2. Change your login/password in the ecovacs_flask.py
+2. Change the login/password/country/continent/service port variables in the ecovacs_flask.py. My port in the example is 5050.
 3. Change directory in the .service file to match where your ecovacs_flask.py file is.
 4. Copy service file to /lib/systemd/system/ then enable it.
 <pre>
