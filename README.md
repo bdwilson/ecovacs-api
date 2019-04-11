@@ -35,7 +35,9 @@ below from that directory
 2. <code> # docker build -t ecovacs-api --build-arg ECOVACS_USER='your@email.address' --build-arg ECOVACS_PASS='your_password' .</code>CTRL-C out of it when it's complete
 Optional arguments are ECOVACS_COUNTRY, ECOVACS_CONTINENT, ECOVACS_PORT. These will default to us, na, and 5050. If you're not in the US, you can leave them
 then connect in via step 3 and determine the correct variables via <code>sucks login</code>
-3. Run your newly created image: <code> # docker run -p 5050:5050 --name ecovacs-api -t ecovacs-api</code>
+3. Run your newly created image: <code> # docker run -p 5050:5050 --name
+ecovacs-api -t ecovacs-api</code> (if you changed the port when you built your
+image, you should also change it here)
 4. That's it. If you need to troubleshoot your docker image, you can get into
 it via:
 <code> # docker exec -it ecovacs-api /bin/bash</code> or 
