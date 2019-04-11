@@ -26,22 +26,23 @@ when someone returns.
 # systemctl enable ecovacs-api.service
 # systemctl start ecovacs-api.service
 </pre>
-5. Use it. 
-<pre>
-# curl -s http://yourip:5050/api/clean/0 
-# curl -s http://yourip:5050/api/charge/0 
-# curl -s http://yourip:5050/api/playsound/0 
-</pre>
 
 # Installation (Docker)
 1. <code> # docker build -t ecovacs-api --build-arg ECOVACS_USER='your@email.address' --build-arg ECOVACS_PASS='your_password' .</code>CTRL-C out of it when it's complete
 Optional arguments are ECOVACS_COUNTRY, ECOVACS_CONTINENT, ECOVACS_PORT. These will default to us, na, and 5050. If you're not in the US, you can leave them
 then connect in via step 3 and determine the correct variables via <code>sucks login</code>
-2. <code> docker run -p 5050:5050 --name ecovacs-api -t ecovacs-api</code>
+2. Run your newly created image: <code> # docker run -p 5050:5050 --name ecovacs-api -t ecovacs-api</code>
 3. That's it. If you need to troubleshoot your docker image, you can get into
-it via <code> # docker exec -it ecovacs-api /bin/bash</code> or <code># docker
-run -it ecovacs-api /bin/bash</code> and then poke around and run the commands
-below like "sucks". 
+it via:
+<code> # docker exec -it ecovacs-api /bin/bash</code> or 
+<code># docker run -it ecovacs-api /bin/bash</code> and then poke around and run the commands below like "sucks". 
+
+# Usage
+<pre>
+# curl -s http://yourip:5050/api/clean/0 
+# curl -s http://yourip:5050/api/charge/0 
+# curl -s http://yourip:5050/api/playsound/0 
+</pre>
 
 # Troubleshooting
 1. If you have multiple vacuums, you may need to change the number to 1, or 2 if you have 3 vacuums on your account. 
