@@ -35,7 +35,7 @@ then connect in via step 3 and determine the correct variables via <code>sucks l
 3. That's it. If you need to troubleshoot your docker image, you can get into
 it via:
 <code> # docker exec -it ecovacs-api /bin/bash</code> or 
-<code># docker run -it ecovacs-api /bin/bash</code> and then poke around and run the commands below like "sucks". 
+<code># docker run -it ecovacs-api /bin/bash</code> and then poke around and run the commands below in the troubleshooting section "sucks". 
 
 # Usage
 <pre>
@@ -45,7 +45,7 @@ it via:
 </pre>
 
 # Troubleshooting
-1. If you have multiple vacuums, you may need to change the number to 1, or 2 if you have 3 vacuums on your account. 
+1. If you have multiple vacuums, you may need to change the number above in the usage to 1, or 2 if you have 3 vacuums on your account. 
 2. You should make sure sucks works before configuring this script. 
 <pre>
 # sucks login
