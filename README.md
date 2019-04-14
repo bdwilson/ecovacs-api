@@ -50,6 +50,11 @@ it via:
 # curl -s http://yourip:5050/api/playsound/0 
 </pre>
 
+# Hubitat
+Use the [http get switch](https://github.com/hubitat/HubitatPublic/blob/master/examples/drivers/httpGetSwitch.groovy)
+to have an on/off switch using the above commands. You can also link these to
+Amazon Alexa so you can have the N79S features on the N79.
+
 # Troubleshooting
 1. If you have multiple vacuums, you may need to change the number above in the usage to 1, or 2 if you have 3 vacuums on your account. 
 2. You should make sure sucks works before configuring this script. 
