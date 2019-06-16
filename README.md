@@ -23,6 +23,7 @@ when someone returns.
 3. Change directory in the .service file to match where your ecovacs_flask.py file is.
 4. Copy service file to /lib/systemd/system/ then enable it.
 <pre>
+# systemctl daemon-reload
 # systemctl enable ecovacs-api.service
 # systemctl start ecovacs-api.service
 </pre>
