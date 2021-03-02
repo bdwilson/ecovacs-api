@@ -33,7 +33,7 @@ when someone returns.
 [Dockerfile](https://raw.githubusercontent.com/bdwilson/ecovacs-api/master/Dockerfile)
 via wget and put it in a directory on your Docker server. Then run the commands
 below from that directory
-2. <code> # docker build -t ecovacs-api --build-arg ECOVACS_USER='your@email.address' --build-arg ECOVACS_PASS='your_password' .</code>CTRL-C out of it when it's complete
+2. <code> # docker build -t ecovacs-api --build-arg ECOVACS_USER='your@email.address' --build-arg ECOVACS_PASS='your_password' .</code> __Don't forget the dot at the end!__ CTRL-C out of it when it's complete
 Optional arguments are ECOVACS_COUNTRY, ECOVACS_CONTINENT, ECOVACS_PORT. These will default to us, na, and 5050. If you're not in the US, you can leave them
 then connect in via step 3 and determine the correct variables via <code>sucks login</code>
 3. Run your newly created image: <code> # docker run -p 5050:5050 --name
