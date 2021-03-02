@@ -53,7 +53,7 @@ it via:
 
 # Hubitat
 Use the [http get switch](https://github.com/hubitat/HubitatPublic/blob/master/examples/drivers/httpGetSwitch.groovy)
-to have an on/off switch using the above commands. You can also link these to
+to have an on/off switch using the above commands. __You use the urls above but without the "curl -s"__. You may also use Rule Machine to make HTTP calls. You can also link these to
 Amazon Alexa so you can have the N79S features on the N79.
 
 # Troubleshooting
